@@ -1,0 +1,119 @@
+{
+  "_links" : {
+    "http://projects.webuml.com/rel/projects" : {
+      "href" : "${baseUri}/projects",
+      "title" : "Projects collection",
+      "methods" : ["POST", "GET"]
+    },
+    "http://projects.webuml.com/rel/project" : {
+      "href" : "${baseUri}/projects/{projectId}",
+      "title" : "Project",
+      "templated" : true,
+      "methods" : ["GET", "PUT"]
+    },
+    "http://projects.webuml.com/rel/packages" : {
+      "href" : "${baseUri}/packages?projectId={projectId}",
+      "title" : "Package Collection",
+      "methods" : ["POST", "GET"]
+    },
+    "http://projects.webuml.com/rel/owningPackage" : {
+      "href" : "${baseUri}/packages/{projectId}",
+      "title" : "Package",
+      "methods" : ["PUT", "GET"]
+    },
+    "http://projects.webuml.com/rel/ownedMember" : {
+      "href" : "${baseUri}/packages/{projectId}",
+      "title" : "Package",
+      "methods" : ["PUT", "GET"]
+    },
+    "http://projects.webuml.com/rel/classes" : {
+      "href" : "${baseUri}/classes?projectId={projectId}",
+      "title" : "Classes collection",
+      "templated" : true,
+      "methods" : ["GET", "POST"]
+    },
+    "http://projects.webuml.com/rel/class" : {
+      "href" : "${baseUri}/classes/{classId}",
+      "title" : "Class",
+      "templated" : true,
+      "methods" : ["GET", "PUT"]
+    },
+    "http://projects.webuml.com/rel/associations" : {
+      "href" : "${baseUri}/associations?projectId={projectId}{&typeId}",
+      "title" : "Association collection",
+      "templated" : true,
+      "methods" : ["GET", "POST"]
+    },
+    "http://projects.webuml.com/rel/association" : {
+      "href" : "${baseUri}/associations/{associationId}",
+      "title" : "Association",
+      "templated" : true,
+      "methods" : ["GET", "PUT"]
+    },
+    "http://projects.webuml.com/rel/lightTables" : {
+      "href" : "${baseUri}/lightTables?projectId={projectId}",
+      "title" : "Light tables collection",
+      "methods" : ["POST", "GET"]
+    },
+    "http://projects.webuml.com/rel/lightTable" : {
+      "href" : "${baseUri}/lightTables/{lightTableId}",
+      "title" : "Light table",
+      "methods" : ["GET", "PUT"]
+    },
+    "http://projects.webuml.com/rel/classViews" : {
+      "href" : "${baseUri}/classViews?projectId={projectId}&classId={classId}&parentViewId={parentViewId}",
+      "title" : "Class view collection",
+      "methods" : ["POST", "GET"]
+    },
+    "http://projects.webuml.com/rel/classView" : {
+      "href" : "${baseUri}/classViews/{classViewId}",
+      "title" : "Class view",
+      "methods" : ["GET", "PUT"]
+    },
+    "http://projects.webuml.com/rel/type" : {
+      "href" : "${baseUri}/types/{typeId}",
+      "title" : "Type",
+      "templated" : true,
+      "methods" : ["GET"]
+    },
+    "http://projects.webuml.com/rel/viewModelCreation" : {
+      "href" : "${baseUri}/viewModelCreation?projectId={projectId}&width={width}&height={height}",
+      "title" : "Automatically creates a LightTableView for project. The dimensions are optional",
+      "templated" : true,
+      "methods" : ["POST"]
+    },
+    "http://projects.webuml.com/rel/thumbnails" : {
+      "href" : "${baseUri}/thumbnails?limit={limit}",
+      "title" : "Thumbnail collection",
+      "templated" : true,
+      "methods" : ["GET"]
+    },
+    "http://projects.webuml.com/rel/thumbnail" : {
+      "href" : "${baseUri}/thumbnails/{lightTableViewId}",
+      "title" : "Thumbnail for light table",
+      "templated" : true,
+      "methods" : ["GET", "PUT"]
+    },
+    "http://projects.webuml.com/rel/properties" : {
+      "href" : "${baseUri}/properties?limit=50{&typeId}",
+      "title" : "Property collection",
+      "templated" : true,
+      "methods" : ["GET", "POST"]
+    },
+    "http://projects.webuml.com/rel/property" : {
+      "href" : "${baseUri}/properties/{propertyId}",
+      "title" : "Property",
+      "templated" : true,
+      "methods" : ["GET", "PUT"]
+    },
+    "metrics" : {
+      "href" : "${baseUri}/metrics"
+    },
+    "env" : {
+      "href" : "${baseUri}/env"
+    },
+    "health" : {
+      "href" : "${baseUri}/health"
+    }
+  }
+}
